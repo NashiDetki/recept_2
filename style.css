@@ -1,0 +1,197 @@
+@font-face {
+    font-family: ficaso;
+    src: url(./recipe/fonts/BadScript-Regular.ttf);
+}
+
+@font-face {
+    font-family: Bandscripts;
+    src: url(./recipe/fonts/BadScript-Regular.ttf);
+} 
+
+@font-face {
+    font-family: ubuntu;
+    src: url(./recipe/fonts/Ubuntu-Light.woff2);
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    max-width: 960px;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: rgb(32, 1, 1); 
+    border-radius: 20px;
+    box-shadow: 10px  2px 1px rgb(32, 1, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.title{
+  color: white;
+  font-family: Picaso;
+  text-decoration: underline;
+  font-size: 56px;
+  line-height: 150px;
+  margin: 0;
+  margin-top: 40px;
+
+}
+
+.description{
+    margin: 0;
+    margin-top: 35px;
+    margin-bottom: 40px;
+    color: white;
+    font-family: ubuntu;
+   
+}
+
+.cards{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* position: absolute; */
+}
+
+.card{
+    width: 260px;
+    height: 500px;
+    /* background-image: url(./recipe/img/кекс.jpg); */
+    border-radius: 20px;
+    /* box-shadow: 4px, 4px, 10px rgb(61, 28, 4); */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;  
+    margin: 20px; 
+    background-size:cover;
+    transition: transform  .4s linear .2s; 
+    
+}
+
+/* 
+@keyframes move(
+  0%(
+     transform: scale(1)
+  ) 
+  20%(
+    transform:scale(1.1)
+  )
+  21%(
+    transform: rotate(0)
+  )
+  54%(
+    transform:rotate(360deg)
+  )
+  90%(
+    transform:skew(10deg)
+  )
+  100%(
+    transform:scale(1)
+  )
+
+) */
+
+.card:hover{
+    transform: scale(1.2); 
+}
+
+
+.card__title{
+  font-family: Bandscripts;
+  color: black;
+  font-size: 25px;
+  margin-top: 35px;
+  
+}
+
+.card__item1{
+    background-image: url(./recipe/img/кекс.jpg);
+   
+}
+
+
+.card__item2{
+    background-image: url(./recipe/img/печенье.jpg);
+   
+    
+}
+
+.card__item3{
+    background-image: url(./recipe/img/трюфель.jpg);
+    
+}
+
+.popup{
+  position: fixed;
+  top: 0;
+  left: 0px;
+  background: rgba(red, green, blue, alpha);
+   opacity: 0;
+   visibility: hidden;
+  transition: opacity 5s linear;
+
+}
+
+.popup__conteiner{
+  left: 250px;
+  background-color: white;
+  margin-top: 200px;
+  font-family: Bandscripts;
+  justify-content: center;
+  text-align: center;
+  width: 500px ;
+  border-radius: 20px;
+  position: relative;
+  /* opacity: 0; */
+  /* transition: opacity 5s linear; */
+  
+}
+
+.popup__title{
+  font-family: Bandscripts;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.popup__text{
+  font-family: ubuntu;
+  font-size: 14px;
+}
+
+.popup__button-exit{
+  position: absolute;
+  background-image: url(./recipe/img/CloseButoon.svg);
+  height: 32px;
+  width: 32px;
+  top: -32px;
+  right: -32px;
+}
+
+@media screen and (max-width: 856px){
+   .popup__conteiner {
+    width: 270px;
+    height: 470px;
+   }
+}
+
+@media screen and (max-width: 750px){
+  .title{
+   font-size: 26px;
+   margin-top: 5px;
+   margin-bottom: 20px;
+   
+  }
+}
+
+.popup__opened{
+  visibility: visible;
+  opacity: 1;
+
+}
